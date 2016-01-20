@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/chef/omnibus-software.git
-  revision: e9675680662c8420b980d2d6067a93212d898f67
+  revision: da76a1bd620373c118eff95014b3a0e21f873d90
+  branch: lcg/nokogiri-float
   specs:
     omnibus-software (4.0.0)
 
