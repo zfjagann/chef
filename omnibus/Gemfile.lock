@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/chef/omnibus.git
-  revision: f338e3d698f7ac67ca4e6fc3fed368747104eccb
+  revision: 39af2e7067c78ef4e8778880b2a11b23bb2e962f
   branch: lcg/ruby-opts
   specs:
     omnibus (5.0.0)
