@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/chef/omnibus-software.git
-  revision: 4aefb7ae85b1ddc441ec93e012ca47adc81b2922
+  revision: e1d614d90503891a95b45e07355d5bae8544b9cd
+  branch: lcg/bundler-rubygems-float
   specs:
     omnibus-software (4.0.0)
 

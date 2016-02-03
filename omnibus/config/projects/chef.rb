@@ -32,8 +32,6 @@ else
   install_dir "#{default_root}/#{name}"
 end
 
-override :bundler,        version: "1.10.6"
-
 if windows?
   override :'ruby-windows', version: "2.0.0-p645"
   # Leave dev-kit pinned to 4.5 because 4.7 is 20MB larger and we don't want
@@ -45,15 +43,9 @@ else
   override :ruby,           version: "2.1.6"
 end
 
-######
-# This points to jay's patched version for now to avoid a security
-# vulnerability and to allow pry to get installed on windows builds.
-# See the software definition for details.
-if windows?
-  override :rubygems,     version: "jdm/2.4.8-patched"
-else
-  override :rubygems,     version: "2.4.8"
-end
+# if you pin either of these, please document why
+# override :rubygems,     version: "2.4.8"
+# override :bundler,      version: "1.10.6"
 
 # Chef Release version pinning
 override :chef, version: "local_source"
