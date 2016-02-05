@@ -43,7 +43,7 @@ if windows?
     override :'ruby-windows-devkit', version: "4.5.2-20111229-1559"
   end
 else
-  override :ruby,           version: "2.1.6"
+  override :ruby,           version: "2.3.0"
 end
 
 override :bundler,      version: "1.11.2"
