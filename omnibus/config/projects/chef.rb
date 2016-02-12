@@ -34,23 +34,8 @@ else
   install_dir "#{default_root}/#{name}"
 end
 
-if windows?
-  override :'ruby-windows', version: "2.0.0-p645"
-  # Leave dev-kit pinned to 4.5 because 4.7 is 20MB larger and we don't want
-  # to unnecessarily make the client any fatter.
-  if windows_arch_i386?
-    override :'ruby-windows-devkit', version: "4.5.2-20111229-1559"
-  end
-else
-  override :ruby, version: "2.1.6"
-end
-
-override :bundler,      version: "1.11.2"
-override :rubygems,     version: "2.5.2"
-
 # Chef Release version pinning
 override :chef, version: "local_source"
-override :ohai, version: "v8.10.0"
 
 dependency "preparation"
 dependency "chef"
