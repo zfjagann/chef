@@ -24,7 +24,7 @@ require "chef/platform/query_helpers"
 shared_context Chef::Resource::WindowsScript do
   before(:all) do
     @ohai_reader = Ohai::System.new
-    @ohai_reader.all_plugins(["platform", "kernel"])
+    @ohai_reader.all_plugins(%w{platform kernel})
 
     new_node = Chef::Node.new
     new_node.consume_external_attrs(@ohai_reader.data, {})
@@ -142,7 +142,7 @@ shared_context Chef::Resource::WindowsScript do
 
       before do
         expect(script_provider).to receive(:unlink_script_file)
-        resource.code('echo hi')
+        resource.code("echo hi")
         script_provider.action_run
       end
 
